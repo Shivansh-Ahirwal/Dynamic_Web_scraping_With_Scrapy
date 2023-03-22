@@ -6,7 +6,7 @@ class MongoDBPipeline:
     collection = 'scrapy_items'
 
     def __init__(self):
-        self.conn = pymongo.MongoClient('mongodb+srv://shivansh:shivansh7578@cluster0.qujskyo.mongodb.net/test')
+        self.conn = pymongo.MongoClient('mongodb+srv://<username>:<password>@cluster0.qujskyo.mongodb.net/test')
         db = self.conn['scraped_data']
         self.collection = db['laclercdata']
     def process_item(self, item, spider):
